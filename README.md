@@ -1,46 +1,56 @@
 
 
-![Logo](https://i.imgur.com/IpYKQJQ.gif)
+# KNN Machine Learning Algorithm with Socket Programming
 
-## ![hi](https://i.imgur.com/RsN6P9Z.gif)About
-This project is part of our Advance Programing course in Computer Science major.
-> ***more will be added as we advance the course***
+Welcome to the KNN Machine Learning Algorithm with Socket Programming README! This project is a C++ implementation of the K-Nearest Neighbors (KNN) machine learning algorithm with the added functionality of socket programming for smooth communication and interaction with clients.
 
-## ![file](https://i.imgur.com/vUPwfJs.gif)Milestone 3
 
-This assignment we worked on implementing a server and client side network,
-Based on the previous milestone, we implemented the KNN algorithm by letting the user enter a menu option and making the server do a certain action as described below in `accepted input from user`. The distance algorithm we used are the follow algorithms:
+## Supported Distance Metrics
 
-- 📐 *Euclidean Distance* 📐
+- 📐 **Euclidean Distance** 📐
 
-$$
-{\displaystyle d(p,q)={\sqrt {(p_{1}-q_{1})^{2}+(p_{2}-q_{2})^{2}+\cdots +(p_{i}-q_{i})^{2}+\cdots +(p_{n}-q_{n})^{2}}}}
-$$
+  ![Euclidean Distance](https://latex.codecogs.com/gif.latex?%5Cinline%20d%28p%2Cq%29%3D%5Csqrt%7B%28p_1-q_1%29%5E2%2B%28p_2-q_2%29%5E2%2B%5Ccdots%2B%28p_i-q_i%29%5E2%2B%5Ccdots%2B%28p_n-q_n%29%5E2%7D)
 
-- 📐 *Manhattan Distance* 📐
+- 📐 **Manhattan Distance** 📐
 
-$$
-{\displaystyle d(\mathbf {p} ,\mathbf {q} )=\left\|\mathbf {p} -\mathbf {q} \right\|_=\sum _{i=1}^{n}\left|p_{i}-q_{i}\right|}
-$$
-- 📐 *Chebyshev Distance* 📐
+  ![Manhattan Distance](https://latex.codecogs.com/gif.latex?%5Cinline%20d%28%5Cmathbf%7Bp%7D%2C%5Cmathbf%7Bq%7D%29%3D%5Cleft%5C%7C%5Cmathbf%7Bp%7D-%5Cmathbf%7Bq%7D%5Cright%5C%7C_%7B1%7D%3D%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%5Cleft%7Cp_i-q_i%5Cright%7C)
 
-$$
-{\displaystyle \lim _{p\to \infty }{\bigg (}\sum _{i=1}^{n}\left|x_{i}-y_{i}\right|^{p}{\bigg )}^{1/p}}
-$$
+- 📐 **Chebyshev Distance** 📐
 
-- 📐 *Canberra Distance* 📐
+  ![Chebyshev Distance](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Clim_%7Bp%5Cto%20%5Cinfty%7D%7B%5Cbigg%20%28%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%5Cleft%7Cx_i-y_i%5Cright%7C%5E%7Bp%7D%7D%7B%5Cbigg%20%29%7D%5E%7B1/p%7D)
 
-$$
-d(\mathbf {p} ,\mathbf {q} )=\sum _{i=1}^{n}{\frac {|p_{i}-q_{i}|}{|p_{i}|+|q_{i}|}}
-$$
+- 📐 **Canberra Distance** 📐
 
-- 📐 *Minkowski Distance* 📐
+  ![Canberra Distance](https://latex.codecogs.com/gif.latex?%5Cinline%20d%28%5Cmathbf%7Bp%7D%2C%5Cmathbf%7Bq%7D%29%3D%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%7B%5Cfrac%7B%7Cp_i-q_i%7C%7D%7B%7Cp_i%7C%2B%7Cq_i%7C%7D%7D)
 
-$$
-{\displaystyle d\left(x,y\right)=\left(\sum _{i=1}^{n}|x_{i}-y_{i}|^{p}\right)^{\frac {1}{p}}}
-$$
+- 📐 **Minkowski Distance** 📐
 
-Using those distance algorithms we can calculate the nearest representation of an element (in this case a vector) and classify it accordingly.
+  ![Minkowski Distance](https://latex.codecogs.com/gif.latex?%5Cinline%20d%5Cleft%28x%2Cy%5Cright%29%3D%5Cleft%28%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%7Cx_i-y_i%7C%5E%7Bp%7D%5Cright%29%5E%7B%5Cfrac%7B1%7D%7Bp%7D%7D)
+
+
+## Features
+
+- **K-Nearest Neighbors**: Implement the KNN machine learning algorithm to classify data based on the nearest neighbors.
+- **Socket Programming**: Utilize socket programming to establish communication channels and interact with clients.
+- **Client-Server Architecture**: Enable multiple clients to connect and send data for classification using the KNN algorithm.
+- **Real-Time Classification**: Perform real-time classification of data sent by clients using the trained KNN model.
+- **Customization**: Adjust the K value, distance metric, and other parameters to fine-tune the KNN algorithm.
+
+## How to Use
+
+1. Clone the repository to your local machine.
+2. Compile the C++ code using the makefile provided (or any other compiler).
+3. Start the server application by running the executable.
+4. Clients can connect to the server using the provided IP address and port number.
+5. Clients can send data to the server for classification.
+6. The server performs classification using the KNN algorithm and sends the results back to the clients.
+7. Analyze the classification results and evaluate the performance of the KNN model.
+
+## Technologies Used
+
+- C++
+- Socket Programming
+
 
 ### ![img](https://i.imgur.com/gNdDOCF.gif)UML Diagrams
 ```mermaid
